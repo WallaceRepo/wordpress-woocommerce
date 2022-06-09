@@ -1,0 +1,188 @@
+
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+p {
+    margin-bottom: $paragraph-margin-bottom;
+    font-family: $body-font-family;
+    font-weight:$global-weight-normal;
+    font-size: 1.04rem;
+    line-height: $global-lineheight;
+    margin: 5px 0 37px;
+ }
+
+a {  
+    color:$body-font-color;
+    line-height: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    word-break: break-all;
+    word-break: break-word;
+    &:visited {
+        border-bottom: 1px solid;
+    }
+    &:hover {   
+        border-bottom: none;
+    }
+    &:active {   
+        color:$body-font-color;     
+    }
+    &:focus {   
+        border: none; 
+    }
+}
+
+hr {
+    clear: both;
+    max-width: $global-width;
+    height: 0;
+    margin: rem-calc(20) auto;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid $grey;
+    border-left: 0;
+}
+
+strong, b  {   
+    font-weight: bold;  
+}
+em, i {   
+    font-style: italic; 
+}
+small {
+    font-size: $small-font-size;
+    line-height: inherit;
+}
+h1, h2, h3, h4, h5, h6 {
+   font-family: $narrow-font-family;
+   font-weight: $header-font-weight;
+    color: $body-font-color;
+    text-rendering: optimizeLegibility;
+    word-break: break-word;
+     text-align: center;
+     small {
+        line-height: 0;
+        color: $header-small-font-color;
+    }
+    
+}
+
+h1 {
+    font-size:2rem;
+    font-weight: 900; 
+    //line-height: 1.65;
+   // margin:0 !important;
+    margin:0;
+    line-height:1.2;
+    
+}
+h4 {
+    margin-bottom: rem-calc(20);
+		line-height: 1;
+		font-weight: 600;
+		font-size: 1.2rem;
+	    color: #008c96;//#89cff0;
+}
+blockquote {
+    font-style: italic; 
+    margin: 0 0 $paragraph-margin-bottom;
+    padding: rem-calc(20 40 20 40);
+    font-family: $font-family-serif;
+    &, p {
+        line-height: $paragraph-lineheight;
+    }
+}
+cite {
+    &:before {
+        content: '—';
+    }
+}
+  // Lists
+ul, ol, dl {
+    margin-bottom: $paragraph-margin-bottom;
+    list-style-position: outside;
+    line-height: $paragraph-lineheight;
+}
+
+li {
+    font-size: inherit;
+    margin-bottom: 0.5rem;
+    
+}
+
+ul {
+    margin-left: 1.25rem;
+    list-style: none;
+}
+
+ol {
+    margin-left: 1.25rem;
+}
+
+ul, ol {
+    & & {
+        margin: 1rem 0 1rem 1.5rem;
+        font-size: 90%;
+    }
+}
+
+dl {
+    margin-bottom:  1rem;
+    dt {
+      margin-bottom: 0.2rem;
+      font-weight: 600;
+    }
+    dd {
+        margin-bottom: 0.8rem;
+    }
+}
+
+abbr, abbr[title] {
+    border-bottom: 1px dashed $medium-grey;
+    cursor: help;
+    text-decoration: none;
+}
+
+figure {
+    margin: 0;
+}
+
+pre {
+    font-family: inherit;
+    margin-bottom: 2.5rem;
+    font-size: 1rem; 
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;
+    > code {
+        display: block;
+        padding: 1rem 1.5rem;
+        white-space: pre;
+    }
+}
+code {
+    padding: rem-calc(2 5 1);
+    border: none;
+    background: $light-grey;
+    border: 1px solid $grey;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem; 
+    overflow: auto;
+}
+
+table {
+    border-collapse: collapse;
+    margin-bottom: $paragraph-margin-bottom;
+}
+tr {
+    border-bottom: 1px solid $light-grey;
+}
+th, td {
+    text-align: left;
+    padding: rem-calc(10px);
+}
+

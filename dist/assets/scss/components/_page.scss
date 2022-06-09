@@ -1,0 +1,204 @@
+.c-page {
+    background-color: #ffffff;
+    //border: 1px solid $grey;
+    //box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.05);
+	//padding: rem-calc(20);
+	//padding: rem-calc(38);
+	
+	padding: 0 20px;
+    overflow: hidden;
+    &__header {
+		margin-bottom: rem-calc(10);
+       
+    }
+    &__title {
+        font-weight: 600;
+	}
+	&__content {
+	    text-align: left;
+		font-family: $body-font-family;
+		color: $body-font-color;
+		padding-top:2rem;
+
+		h1 {
+			font-size: 2rem;
+			color:$body-font-color;
+			font-family: $body-font-family;
+			padding-bottom: 45px;
+			padding-top:10px;
+		    letter-spacing: 2px;
+		}
+		h1.faqpage {
+           font-family:$body-font-family;
+		}
+		h2.about-page, h3.about-page {
+			text-align: left;
+			margin-bottom:12px;
+			color: $primary-colour;
+		}
+		h1, h2, h3, h4, h5, h6, strong {
+			color: $primary-colour;
+		}
+
+	
+    }		
+}	
+
+div.wp-block-media-text__content {
+		//	padding: 0 !important;
+}
+/// PAGE GRID************/
+header.category-page-header {
+	margin: 0 auto;
+	width:90%; 
+	p {
+	   margin: 36px auto;
+	   width:70%; 
+	   line-height: 1.6;
+	  // color: $dark-grey;
+	   text-align: center;
+	}
+	h1 {
+		font-weight: 500;
+            border-bottom: none;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+           letter-spacing: 3px;
+		   color: $primary-colour;
+		  
+	}
+
+   
+}
+
+/*Masonry STARTS HERE!!! */
+* {
+	box-sizing: border-box;
+  }
+section.mason {
+	
+  .grid {
+	  width:97vw;
+	  margin: 20px auto;
+	  
+   .grid-item {
+	  width: 33.3%;
+	  padding: 10px;
+	  //background:#eee;
+	  
+         figure {
+			-webkit-transition: opacity 0.2s;
+			transition: opacity 0.2s;
+			border: 1px solid #EEE;
+			box-shadow: 1px 1px 6px 0 rgba(0,0,0,.09);
+			transition: transform 0.5s ease; 
+			img {
+				width:100%;
+				height:auto;
+			   }
+			figcaption {
+					//background: #fff;
+				    padding: 25px;
+					text-align: center;
+					position: relative;
+				p {
+					padding: .47rem .2rem;
+					font-family:$body-font-family;
+					font-size: .65rem;
+					line-height: 1.1;
+					letter-spacing: 1px;
+					position: absolute;
+					text-transform: uppercase;
+					background: #D9EBF3;
+					color:$body-font-color;
+					top:-23px;
+					right:0;
+					left:0;
+					width:50%;
+					margin-left: auto;
+					margin-right: auto;             
+			 &:before {
+						content: "";
+						position: absolute;
+						left: -1.70rem;
+						top: -0.4px;
+						z-index: 1;
+						border: 0.86rem solid transparent;
+						border-top-color: #D9EBF3;
+						transform: rotate(90deg);
+					}
+			 &:after {
+						content: "";
+						position: absolute;
+						right: -1.70rem;
+						top: -0.4px;
+						z-index: 1;
+						border: 0.86rem solid transparent;
+						border-top-color:#D9EBF3;
+						transform: rotate(-90deg);
+						}
+			        }
+				h6 {
+					padding: 0.5em 0;
+					font-size: 1.2em;
+					//letter-spacing: 0.6px;
+					line-height:1.3;
+					text-transform: capitalize;
+					color: $black-grey;
+					font-family: $shop-font-family;
+					}
+	 			}
+		 }
+		 :hover figure {
+			opacity: 0.8;
+			-moz-transform: translate(0px, -1.5px);
+			-ms-transform: translate(0px, -1.5px);
+			-o-transform: translate(0px, -1.5px);
+			-webkit-transform: translate(0px, -1.5px);
+			transform: translate(0px, -1.5px)
+    		}
+      }
+   }
+}
+@media screen and (min-width: 1300px) {
+	/* 5 columns for larger screens */
+	section.mason .grid .grid-item { 
+		width: 25%; 
+	   
+	    figure figcaption h6 {
+			font-size: 1.2em;
+	   }
+	}
+}
+@media screen and (max-width: 980px) {
+	
+	section.mason .grid .grid-item figure figcaption{  
+		padding: 19px 10px;
+		h6 {
+			font-size: 1.1em;
+			letter-spacing: 0;
+		   }
+		   p {
+			width:75%;
+			font-size: 0.7em;
+		     }
+		}
+   }
+@media screen and (max-width: 768px) {
+	section.mason .grid .grid-item { 
+		width: 50%; 
+		figure figcaption {  
+			padding: 19px 10px;
+		h6 {
+			font-size: 1em;
+			letter-spacing: 0;
+		   }
+		 p {
+			width:75%;
+			font-size: 0.7em;
+		    }
+		}
+	}
+}	
+
+

@@ -1,0 +1,427 @@
+header {
+    position: relative;
+}
+.header-nav .menu {
+    background: #fff;
+    font-family: $body-font-family;
+    margin: 0;
+    display: flex;
+    list-style: none;
+    .menu-button {
+        padding: 0;
+        background-color: transparent;
+        color: inherit;
+       // margin-left: rem-calc(7px);
+    }
+    > .menu-item {
+        margin: 0;
+        > a {
+            text-transform: uppercase;
+            padding: rem-calc(12px 20px);
+           // font-family: $description-font-family;
+            border-bottom: none;
+            //display: block;
+            display:flex;
+            color: $body-font-color;
+            font-weight: 500;
+            letter-spacing:3px;
+            font-size: 0.75rem;
+             svg {
+                 width:1em;
+                 height: 1em;
+             }
+            
+            &:hover {
+                color:$primary-colour;
+                fill:$primary-colour;
+            }
+        }
+      > .sub-menu {
+            position: absolute;
+            margin: 0;
+            list-style: none;
+            background: #fff;
+          display: none;
+            z-index: 10;
+            box-shadow: 0 2px 8px -3px rgba(0, 0, 0, 0.5), 0 1.4em 2em -0.7em rgba(255, 255, 255, 0.2) inset;
+        }
+    }
+    > .menu-item:not(.mega) {
+        .sub-menu {
+            .sub-menu {
+                position: absolute;
+                margin: 0;
+                list-style: none;
+                background: #fff;
+                display: block; /* to change display none */
+                min-width: 200px;
+                left: 100%;
+                font-size: 100%;
+                top: 0px;
+                border-top-color:#efefef;
+            }
+            .menu-item {
+                margin: 0;
+                position: relative;
+               a { 
+                    padding: rem-calc(6px 20px);
+                    display: block;
+                    font-size: rem-calc(14);
+                    color: #333;   
+                    font-weight: 500;
+                    letter-spacing: 1px;  
+                    text-transform:  uppercase;
+                  &:hover {
+                    color:#fff;
+                    } 
+                     
+                }
+              
+            }
+        }
+    }
+    .menu-item:not(.mega).open > .sub-menu {
+        display: block !important;
+    }
+    .menu-item.mega.open > .sub-menu {
+        display: flex !important;
+      }
+    > .menu-item.mega {
+        margin: 0;
+           
+        > .sub-menu {
+            width: 100%;
+            left: 0;
+            flex-wrap: wrap;
+           > .menu-item > a {
+                border-bottom: none;
+                color: #333;
+                display: inline-block;
+                margin-bottom: rem-calc(5);
+                  /* I added below */
+                display: flex;
+                flex-direction: column;
+                background:transparent;
+                letter-spacing: 1px;
+                button {
+                    display: none
+                }
+                > svg {
+                    width: 35px;
+                    height: 35px;
+                    margin: 0 auto;
+                    align-self: center;
+                   
+                }
+                > .icon-fireworks-1 {
+                   fill: #ffcc00;
+                }
+                > .icon-mittens {
+                    fill: #77ab59;
+                }
+                > .icon-lamp {
+                   // fill: #dab6db;
+                    fill: #cdb2cb;
+                }
+                > .icon-lotus-flower {
+                    fill: #81d8d0;
+                }
+                > .icon-sunset {
+                   fill: #ffcccb;
+                }
+                > span {
+                    display: inline-block;
+                    align-self: center;
+                    //background: #D4DCB5;
+                    padding: .34rem;
+                    font-size: rem-calc(14);
+                    letter-spacing: 1.5px;
+                    line-height: 120%;
+                    cursor: pointer;
+                    text-transform: uppercase;
+                    margin: 0.34rem 0 0.64rem 0;
+                    position: relative;
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        left: -29px;
+                        bottom: 0px;
+                        z-index: 1;
+                        border: 15px solid transparent;
+                        transform: rotate(90deg);
+                    }
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        right: -29px;
+                        bottom: 0px;
+                        z-index: 1;
+                        border: 15px solid transparent;
+                        //border-top-color:#D4DCB5;
+                        transform: rotate(-90deg);
+                    }
+                }
+                > .title-fireworks-1 {
+                    background: #ffee95;
+                    &:before {
+                        border-top-color:#ffee95;
+                    }
+                    &:after {
+                        border-top-color:#ffee95;
+                    }
+                }
+                > .title-mittens {
+                    background: #c0dcb0;
+                    &:before {
+                        border-top-color:#c0dcb0;
+                    }
+                    &:after {
+                        border-top-color:#c0dcb0;
+                    }
+                }
+                > .title-lamp {
+                    background: #eee4ee;
+                    &:before {
+                        border-top-color:#eee4ee;
+                    }
+                    &:after {
+                        border-top-color:#eee4ee;
+                    }
+                }
+                > .title-lotus-flower {
+                    background: #d2f2ef;
+                    &:before {
+                        border-top-color:#d2f2ef;
+                    }
+                    &:after {
+                        border-top-color:#d2f2ef;
+                    }
+                }
+                > .title-sunset {
+                    background: #ffe3dc;
+                    &:before {
+                        border-top-color:#ffe3dc;
+                    }
+                    &:after {
+                        border-top-color:#ffe3dc;
+                    }
+                }
+            }
+            > .menu-item > .sub-menu {
+                margin: 0;
+               
+                a {
+                  /*  padding-left: 30%;        If I choose 3 column then i should add it */            
+                    border-bottom: none;
+                    color: #333;   
+                    font-size: rem-calc(18);
+                   // font-weight: 500;
+                   // letter-spacing: 1px; 
+                    font-family: $body-font-family; 
+                    background:#F1FAFD;
+                    &:hover {
+                        color: $primary-colour;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        @for $i from 1 through 6 {
+            &.cols-#{$i} {
+                > .sub-menu > .menu-item {
+                   /* width: #{1/$i*100 + '%'};*/
+                   /******************************/
+                   /*  ANKHAAR ENIIG MEDIA QUERY-d ORUULVAL RESPONSIVE BOLNO */ 
+                    width: -webkit-calc(20% - 1.2rem);
+                    width: calc(20% - 1.2rem);
+                    padding: rem-calc(20px); 
+                    background: -webkit-linear-gradient(#FFF 3.65rem,#F1FAFD 3.65rem);
+                    background: linear-gradient(#FFF 3.65rem,#F1FAFD 3.65rem);
+                    margin: .6rem;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+
+} 
+.c-navigation {
+    background: #FFF;
+    box-shadow: 0 0 30px rgba(234,242,250,.95);
+    -webkit-box-shadow: 0 0 30px rgba(234,242,250,.95);
+    -moz-box-shadow: 0 0 30px rgba(234,242,250,.95);
+    //border-bottom:1px solid #009694;
+    color: #2b2b2b;
+    font-weight: 400;
+    nav {
+        position: relative;
+     
+    }
+}
+.c-header {
+     position: absolute;
+     top: 23%;
+     left: 27%;
+    z-index: 0;
+    /* padding: rem-calc(90) 0; */
+    &__logo {
+        display:none;
+        font-family: 'Berkshire Swash' !important;
+        font-weight: 500;
+        font-size: rem-calc(70);
+        z-index: 10;
+        a {
+            color: #009694 !important;
+        }
+        img {
+            max-width: 200px;
+        }
+    }
+}
+/* SVG Buttons for SOCIAL ICONS  *******/
+button.menu-toggle {
+    display: none;
+    background-color: transparent;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #333;
+    text-shadow: none;
+    transition: background 0.2s;
+    top:0px;
+   
+        & svg:not(:root) {
+            overflow: hidden;
+        } 
+        .icon {
+            display: inline-block;
+            fill: currentColor;
+            height: 1em;
+            position: relative;
+            top: -0.0625em;
+            vertical-align: middle;
+            width: 1em;
+            margin-right: 0.5em;
+            top: -2px;
+        }
+        .icon-close {
+          display: none;
+        }
+    
+} 
+     li.current-menu-item > a, .current-page-ancestor > a , .current-menu-ancestor > a, .current_page_ancestor > a  {
+         color: #ff9500 !important;
+        // border-bottom: 3px solid  $primary-colour !important;
+              
+    }
+  @media (min-width: 560px) and (max-width: 900px){
+    .header-nav .menu {
+          
+        > .menu-item {
+        > a {
+            padding: rem-calc(10px 20px);
+            font-size: rem-calc(16);
+            letter-spacing: 1px;
+          
+            }
+       }
+    > .menu-item:not(.mega) {
+         .sub-menu {
+           .menu-item {
+               a {
+                    font-size: rem-calc(14);
+                    letter-spacing: 1px;
+                    padding: rem-calc(6px 10px);
+                    
+                 } 
+              }
+           }
+       } 
+    > .menu-item.mega {
+      
+        @for $i from 1 through 6 {
+            &.cols-#{$i} {
+                > .sub-menu > .menu-item {
+                   /* width: #{1/$i*100 + '%'};*/
+                   /******************************/
+                   /*  ANKHAAR ENIIG MEDIA QUERY-d ORUULVAL RESPONSIVE BOLNO */ 
+                    width: -webkit-calc(33.2% - 1.2rem);
+                    width: calc(33.2% - 1.2rem);
+                    padding: rem-calc(10px 20px); 
+                    margin: .6rem;
+                    background: -webkit-linear-gradient(#FFF 3.25rem,#F1FAFD 3.25rem);
+                    background: linear-gradient(#FFF 3.25rem,#F1FAFD 3.25rem);
+                    
+               
+                }
+            }
+        }
+    } 
+}
+}
+@media only screen and (max-width: 559px){
+    button.menu-toggle {
+        display:block;
+    }
+    .menu-main-menu-container {
+        position: absolute;
+        width:100%;
+        z-index: 88;
+       
+    }
+    .header-nav .menu {
+        flex-direction: column;
+        display: none;
+        
+        > .menu-item {
+            > a {
+                padding: rem-calc(6px);
+                font-size: rem-calc(16);
+                letter-spacing: 1px;
+                }
+           }
+       
+        > .menu-item:not(.mega) {
+            .sub-menu {
+              .menu-item {
+                  a {
+                       font-size: rem-calc(15);
+                       letter-spacing: 1px;
+                       padding: rem-calc(5px);
+                    } 
+                 }
+              }
+            }
+        > .menu-item.mega {
+      
+
+            @for $i from 1 through 6 {
+                &.cols-#{$i} {
+                    > .sub-menu > .menu-item {
+                    /* width: #{1/$i*100 + '%'};*/
+                    /******************************/
+                    /*  ANKHAAR ENIIG MEDIA QUERY-d ORUULVAL RESPONSIVE BOLNO */ 
+                        width: -webkit-calc(50% - 1.2rem);
+                        width: calc(50% - 1.2rem);
+                        padding: rem-calc(10px 20px); 
+                        margin: .6rem;
+                        background: -webkit-linear-gradient(#FFF 3.25rem,#F1FAFD 3.25rem);
+                        background: linear-gradient(#FFF 3.25rem,#F1FAFD 3.25rem);
+                    }
+                }
+            }
+        }
+    }
+   
+    .toggled-on {
+        display: flex !important;
+        box-shadow: 0 2px 8px -3px rgba(0,0,0,.5), 0 1.4em 2em -0.7em rgba(255, 255, 255, .2) inset;
+    }
+    .visible {
+        display: inline-block !important;
+    }
+    .none {
+        display: none !important;
+    }
+
+}

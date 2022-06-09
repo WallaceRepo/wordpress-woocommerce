@@ -1,0 +1,254 @@
+//SHOP PAGE 
+
+.shop-page, .woocommerce {
+    font-family: $shop-font-family !important;
+    -webkit-font-smoothing: antialias;
+   color: $black;
+   font-style: normal;
+   
+   padding:0;
+   font-weight: 400;
+     ul.products li.product {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       padding:5px;
+      
+       line-height: 1.4 !important;
+  a img {
+        margin:0;
+        }
+    &:hover  {
+        box-shadow: 0 0 30px rgba(234,242,250,.95);
+        -webkit-box-shadow: 0 0 30px rgba(234,242,250,.95);
+        -moz-box-shadow: 0 0 30px rgba(234,242,250,.95);
+        }
+
+    h2.woocommerce-loop-product__title {
+       // padding:0 0 15px;
+        font-family: $shop-font-family;
+        font-size: 0.86rem;
+        line-height: 1.6;
+        text-align: left;
+        color:$black-grey;
+        }
+    span.price{
+         text-align: left;
+        // padding: 15px 20px 15px;
+         color: $black;
+         font-size: 0.8rem;
+         margin:0;
+         font-weight: 700;
+        }
+    }
+    a.add_to_cart_button {
+        background: $grey;
+        font-size: 0.87rem;
+        line-height: 1.4 !important;
+       // border:1px solid $black;
+        color: $black;
+        font-weight:400;
+      &:hover {
+            background-color: $alert-colour;
+            color: $black;
+        }
+    }
+
+}
+// CART PAGE
+.woocommerce-cart table.cart img, .woocommerce-checkout table.cart img {
+    width: 150px;
+    
+}
+//ALL BUTTONS on Cart, Ship, Single product page
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button, .woocommerce button.button.alt {
+    font-weight:400;
+    background: $yellow;
+    border:1px solid $black;
+    font-size: 0.87rem;
+    color: $black;
+    
+       &:hover {
+        background-color: $alert-colour;
+        color: $black;
+        
+    }
+}
+.woocommerce div.quantity .qty {
+    margin-right:5px;
+    margin-top:1px;
+    font-size: 1.3em;
+    line-height: 1.2;
+    background: #fff;
+    border: 1px solid $purple;
+ }
+
+//Single Product Page 
+
+.woocommerce div.entry-summary {
+        h1.product_title {
+          color: $medium-grey;
+          letter-spacing: 0;
+            text-align: left;
+             font-size:1.2rem;
+             font-weight: 400;
+             font-family: $shop-font-family;
+           //  color: $primary-colour;
+            } 
+      p.price {
+         margin:14px 0 !important;
+         //color: $black;
+         font-size: 0.9rem;
+         margin: 0;
+         font-weight: 700; 
+         font-family: $shop-font-family;
+        }
+    button.single_add_to_cart_button {
+         width: 60%;
+         padding:11px 0;
+     }
+}
+.woocommerce div.product form.cart {
+    margin:1.4rem 0 !important;
+    table td {
+        padding:0 !important;
+        line-height: 1.2em !important;
+        label {
+           // font-weight:500 !important;
+            font-size: 0.8em;
+            letter-spacing: 1px;
+
+        }
+       span {
+           width:45px;
+           border:none;
+       }
+    }
+
+}
+div.woocommerce-product-details__short-description{
+    ul {
+        list-style: disc;
+        font-size: 1.1rem;
+         
+       li {
+           line-height: 1.4;
+           font-size: 1.05rem;
+           font-family: $body-font-family;
+       }   
+    }
+    p { 
+        font-family: $shop-font-family;
+        line-height: 1.5;
+      
+        em {
+            font-family: $shop-font-family;
+            color: $success-colour;
+        }
+    }
+}
+//Single Product TABS
+.woocommerce div.product div.woocommerce-tabs {
+   // margin-top:20px;
+   padding:20px 0 !important;
+    font-family: $shop-font-family;
+   
+   .panel {
+       width:80vw;
+       margin: 0 auto !important;
+       
+        h2 {
+             color: $secondary-colour;
+             font-size:1.2rem;
+             font-weight: 400;
+             font-family: $shop-font-family;
+        }
+
+        p.center-p { text-align: left;
+            line-height:0;
+            font-family: $shop-font-family;
+        }
+        ul {
+            list-style-type: disc;
+           
+           li {
+               line-height: 1.5;
+
+           }   
+        }
+
+    }
+    ul.tabs li {
+        border: 1px solid $purple;
+        background-color: $secondary-colour-dim;
+    }
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li a {
+    padding: .2em 0;
+    font-weight: 500;
+
+}
+   //Checkout Form
+.woocommerce form .form-row label {
+    line-height: 0.8;
+    margin-top: 20px;
+}
+div.woocommerce-billing-fields {
+    h3 {
+        color: $alert-colour;
+        font-weight: 600;
+        font-size: 1.5rem;
+    }
+}
+h3#order_review_heading  {
+    color: $alert-colour;
+        font-weight: 600;
+        font-size: 1.5rem;
+}
+
+//widget
+.woocommerce ul.product_list_widget li {
+    font-family: $body-font-family; 
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin:18px 0;
+    img {
+         width:100%;
+         margin-bottom: 0px;
+    }
+    > span, del, ins {
+       font-weight: 700;
+       font-size: 0.8rem !important;
+       font-family:$shop-font-family !important;
+       
+    }
+   &:hover {
+        box-shadow: 0 0 30px rgba(234,242,250,.95);
+        -webkit-box-shadow: 0 0 30px rgba(234,242,250,.95);
+        -moz-box-shadow: 0 0 30px rgba(234,242,250,.95);
+    }
+}
+.woocommerce ul.product_list_widget li a {
+    font-weight: 400;
+  //  text-align: right;
+    color: $black-grey;
+}
+
+/* Below scss is for moving gallei thumbnail image from bottom to the left side of large image */
+.woocommerce div.product {
+    margin-top:35px;
+}
+
+section.related {
+   h2 {
+       padding:10px 0 30px;
+       font-size: 1.8rem;
+   }
+}
+
+
+
+
+
+
+

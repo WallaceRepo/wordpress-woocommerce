@@ -1,0 +1,1 @@
+<p class = "content-none"><?php echo apply_filters('TheFertileValley_no_posts_text', esc_html__('0 results found for your search. Please try another search term', 'TheFertileValley')); ?></p>

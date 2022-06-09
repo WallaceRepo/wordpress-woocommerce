@@ -1,0 +1,45 @@
+html {
+    box-sizing: border-box;
+    font-size: $base-font-size;
+    height: 100%;
+}
+body {
+    background-color: $body-background;  
+    font-family: $body-font-family;
+    font-weight: $global-weight-normal;
+    line-height: $global-lineheight;
+    color: $body-font-color;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+     letter-spacing: 0.5px;
+    .transition-animation {
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        -ms-transition: all .5s;
+        -o-transition: all .5s;
+        transition: all .5s;
+    }
+    
+}
+
+img {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+    -ms-interpolation-mode: bicubic;
+}
+
+/*:focus {
+    outline: 2px solid $primary-colour;
+}  */
+::selection {
+    background: $primary-colour;
+    color: #ffffff;
+}
+::-moz-selection {
+    background: $primary-colour;
+    color: #ffffff;
+} 
+
